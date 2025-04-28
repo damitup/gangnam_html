@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+    .out_box{
+        height: 150px;
+        border: blue 3px solid;
+        display: block;
+        margin: 20px;
+    }
+    .box{
+        border: red 3px solid;
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+        margin: 20px;
+    }
+</style>
+</head>
+<body>
+    <div class="out_box">
+        <div class="box">
+            A
+        </div>
+        <div class="box">
+            B
+        </div>
+        <div class="box">
+            C
+        </div>
+        <br />
+        display: inline-block;
+        width: 100px;
+        height: 100px;
+    </div>
+
+    <!-- 2번째 영역 box를 안보이게 해줌 -->
+    <!-- hidden은 좌표값을 가지고 있고, none은 좌표값은 없음 대신 event를 통해 마우스를 가져가면 나오는 기능을 만들 수 있음 -->
+    <!-- <div class="out_box" >
+        2번째 영역
+        </div> -->
+        <div class="out_box" style="display: none;"></div>
+</div>
+<!-- display에 보이는 박스를 안보이게 만들어줌 -->
+<div class="out" style="display: none;"> </div>
+
+</body>
+</html>

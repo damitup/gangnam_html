@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 2일차 시맨틱 </title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            box-sizing: none;
+
+            width: 100vw;
+            height: 100vh;
+            /* 높이는 잘 안줌 스크롤이 안되니까 (나중엔 높이 넣지 마셈) */
+        }
+
+        .top {
+            height: 50px;
+            border: 1px solid orangered;
+        }
+
+        .main {
+            height: 100%;
+            background-color: aliceblue;
+        }
+
+        .footer {
+            height: 50px;
+            background-color: darkseagreen;
+        }
+        
+        .container {
+            height: 100%;
+
+            display: flex;
+            flex-direction: column;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- 기능은 div인데 해당 구역? 부분?을 명확하게 확인하기 위해서 사용 -->
+        <top class="top"> 내 사이트 </top>
+        <main class="main"> 메인 </main>
+        <footer class="footer"> 2025 </footer>
+    </div>
+</body>
+
+</html>

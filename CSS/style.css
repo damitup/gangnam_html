@@ -1,0 +1,5 @@
+ /* css 영역, 주석 방법 */
+ /* tag로 css 적용할 수 있다 */
+ div {
+     border: 1px red solid;
+ }

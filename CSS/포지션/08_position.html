@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <style>
+
+        body {
+            margin: 0;
+            padding: 0;
+            height: 200vh;
+        }
+
+        main,
+        section,
+        article,
+        div{
+            border: 1px solid black;
+            padding: 0;
+        }
+        main {
+            max-width: 600px;
+            margin: 0 auto;
+            background-color:green;
+        }
+        section {
+            background-color:rgb(63, 122, 122);
+        }
+        article {
+            background-color: blueviolet;
+        }
+        div {
+            background-color:white;
+        }
+        div.relative {
+            position:relative;
+        }
+        div.absolute {
+            position:absolute;
+            background-color: aquamarine;
+            top: 0px;
+            left: 0px;
+        }
+        div.fixed {
+            position: fixed;
+            background-color: deepskyblue;
+        }
+    </style>
+</head>
+<body>
+<main>
+    main
+    <section>
+        section
+        <article>
+            article
+            <div>Hello World</div>
+            <div class="relative">relative
+                <div class="absolute">rel-abs</div>
+            </div>
+            <div class="absolute">absolute</div>
+            <div class="fixed">fixed</div>
+        </article>
+    </section>
+</main>
+</body>
+</html>

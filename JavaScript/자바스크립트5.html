@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="button" value="클릭" onclick="클릭()"/>
+    <input type="button" value="클릭" onclick="클릭2()"/>
+
+    <script>
+        
+        // 변수 타입 var, let, const
+        var 변수v = 100;
+
+        // let을 사용하면 변수 재선언을 막을 수 있음 
+        let 변수2 = 'abc';
+
+        // let 변수2 = 'bbb';는 사용 불가
+        // let 변수2 = 'bbb';
+        // let 변수2 = 'ccc';
+
+        var 변수v = 500;
+
+
+        
+        function 클릭() {
+            var 변수v = 1500;
+            console.log(변수v);
+
+            // 1500이 출력됨
+        }
+
+
+        function 클릭2() {
+            console.log(변수2);
+
+            // let 변수2 = 'bbb'인 문장이 주석처리 되어있어 정상적으로 출력됨
+            // 주석처리 안되어 있으면 정상적으로 실행이 되지 않음 
+        }
+
+    </script>
+</body>
+</html>

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Gothic+A1&family=Noto+Sans+KR:wght@100..900&display=swap');
+
+.div_e {
+    border: 1px solid green;
+    font-family: "Gothic A1", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 600;
+    font-style: normal;
+    
+    /* 
+    정렬, left, center, right
+    padding-right: 20px;
+    text-align: right;
+     */
+    
+    text-align: center;
+
+    /* 
+    em: 부모태그에서 정의한 font-size를 기준
+    부모태그가 10px, 2em (200%) => 20px
+    rem: HTML에서 font-size를 정의 (기본 10px) 상대적 크기가 결정
+    1rem => HTML Font-size 기준 100% (10px => 1.8 (180%) => 18px)
+    */
+    line-height: 1.8rem;    /* 줄 간격 */
+    letter-spacing: 5px;    /* 글자 간 간격(자간) */
+    word-spacing: 1px;     /* 단어 간 간격 */
+    text-indent: 80px;      /* 문단 첫 줄 들여쓰기 */
+}
+
+a {
+    text-decoration-line: line-through;
+    color: aqua;
+ }
+
+.font-1 {
+    font-size: 20px;
+    font-weight: bold;
+    color: orangered;
+}

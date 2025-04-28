@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 100px;
+            height: 100px;
+            background-color: pink;
+        }
+
+        div.active {
+            animation-name: test;
+            animation-duration: 5s;
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+        }
+        /* @keyframes [명칭] */
+        @keyframes test {
+            /* from {
+                transform: translateX(0px) rotate(0deg);
+            }
+            to {
+                transform: translateX(300px) rotate(540deg);
+            } */
+
+            0% {
+                transform: translateX(0px) rotate(0deg);
+            }
+            75% {
+                transform: translateX(500px) translateY(300px) rotate(540deg) skewX(30deg) skewY(30deg);
+            }
+            100% {
+                transform: translateX(300px) rotate(540deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <input type="button" onclick="실행()" value="클릭"/>
+    <div id="target"></div>
+
+    <script>
+        function 실행() {
+            document.getElementById('target').classList.toggle('active');
+        }
+    </script>
+</body>
+</html>

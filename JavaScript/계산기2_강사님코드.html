@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num1" />
+
+    <select id="oper">
+        <option>+</option>
+        <option>-</option>
+        <option>*</option>
+        <option>/</option>
+    </select>
+
+    <input type="text" id="num2" />
+    <input type="button" value="계산" onclick="calc()" /><br />
+    <input type="text" id="result" />
+    <script>
+
+        function calc() {
+            const inp_num1 = document.getElementById('num1');
+            const inp_num2 = document.getElementById('num2');
+            const result = document.getElementById('result');
+
+            const op = document.getElementById('oper'); // html 테그
+
+            let resultNum = 0;
+
+            switch (op.value) {
+                case '+':
+                    resultNum = parseInt(inp_num1.value) + parseInt(inp_num2.value);
+                    break;
+                case '-':
+                    resultNum = parseInt(inp_num1.value) - parseInt(inp_num2.value);
+                    break;
+                case '*':
+                    resultNum = parseInt(inp_num1.value) * parseInt(inp_num2.value);
+                    break;
+                case '/':
+                    resultNum = parseFloat(inp_num1.value) / parseFloat(inp_num2.value);
+                    break;
+                default:
+                    alert('계산 안 됩니다.');
+            }
+            inp_num1.value = '';
+            inp_num2.value='';
+            result.value = resultNum;
+        }
+    </script>
+</body>
+
+</html>

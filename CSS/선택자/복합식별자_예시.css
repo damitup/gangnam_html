@@ -1,0 +1,34 @@
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.area_a {
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: brown;
+    
+}
+.area_a .container {
+    width: 100px;
+    height: 100px;
+    background-color: palevioletred;
+}
+body {
+    margin: 0;
+    padding: 0;
+}
+
+.area_b {
+    
+    width: 100vw;
+    height: 100vh;
+    background-color: darkslateblue;
+    
+}
+.area_b .container {
+    width: 100px;
+    height: 100px;
+    background-color: darkseagreen;
+}

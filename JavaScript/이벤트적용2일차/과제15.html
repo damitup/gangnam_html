@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <h1> 회원가입 </h1>
+
+    <span>이름: <input type="text" id="name" onkeyup="keyup()" /></span>
+    <br />
+    <br />
+    <span id="name_len">글자수: </span>
+    <span id="txsize"></span>
+    <br />
+    <br />
+
+    <span>나이: <input type="text" id="age" onchange="age()"></span>
+    <br />
+    <br />
+    <span id="agecheck"></span>
+    <br />
+    <br />
+    <input type="button" value="가입하기" id="reg" onclick="btn()" />
+
+    <script>
+        const name = document.getElementById('name');
+        
+        const agee = document.getElementById('age');
+
+        function keyup() {
+            const nameLen = name.value.length;
+
+            // .innerHTML
+            document.getElementById('txsize').innerHTML = nameLen;
+        }
+
+        function age() {
+
+
+            if (agee.value > 19) {
+                document.getElementById('agecheck').innerHTML = '성인입니다.';
+            }
+            else {
+                document.getElementById('agecheck').innerHTML = '청소년입니다.';
+            }
+
+        }
+
+        function btn() {
+
+            console.log(name.value);
+            console.log(name.value.length);
+
+            console.log(agee.value);
+        }
+
+    </script>
+</body>
+
+</html>

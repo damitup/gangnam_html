@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="text" id="num1" />
+    <input type="text" id="num2" />
+
+    <input type="radio" name="opr" value="1" />+
+    <input type="radio" name="opr" value="2" />-
+    <input type="radio" name="opr" value="3" />*
+    <input type="radio" name="opr" value="4" />/
+
+    <input type="button" value="계산" onclick="계산()" /><br />
+
+    <input type="text" id="result" />
+
+
+    <script>
+        function 계산() {
+            const input_num1 = parseInt(document.getElementById('num1').value);
+            const input_num2 = parseInt(document.getElementById('num2').value);
+
+            const input_opr = document.getElementsByName('opr');
+            const re_result = document.getElementById('result');
+
+            let result = 0;
+
+            for (let i = 0; i < input_opr.length; i++) {
+                if(input_opr[i].checked) {
+                switch (input_opr[i].value) {
+                    case '1':
+                        result = input_num1 + input_num2;
+                        break;
+                    case '2':
+                        result = input_num1 - input_num2;
+                        break;
+                    case '3':
+                        result = input_num1 * input_num2;
+                        break;
+                    case '4':
+                        result = input_num1 / input_num2;
+                        break;
+                   
+
+                    }
+                }
+            }
+            
+
+            re_result.value = result;
+        }
+    </script>
+</body>
+
+</html>

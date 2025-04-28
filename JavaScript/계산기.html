@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>계산기</title>
+</head>
+
+<body>
+    <h1> 계산기 </h1> <br />
+        <input type="text" id="num_1" />
+
+        <select id="opr">
+            <option value="+"> + </option>
+            <option value="-"> - </option>
+            <option value="*"> * </option>
+            <option value="/"> / </option>
+        </select>
+
+        <input type="text" id="num_2" />
+
+        <input type="button" value="계산" onclick="계산()" /> <br />
+
+        <input type="text" id="result" placeholder="결과값 출력" />
+
+
+    <script>
+        function 계산() {
+
+            const input_num1 = document.getElementById("num_1");
+            const input_num2 = document.getElementById('num_2');
+
+            const opr = document.getElementById('opr');
+            
+
+            const res = document.getElementById('result');
+            let resNum = 0;
+
+            switch (opr.value) {
+                case "+":
+                resNum = parseInt(input_num1.value) + parseInt(input_num2.value);
+                    break;
+                case "-":
+                resNum = parseInt(input_num1.value) - parseInt(input_num2.value);
+                    break;
+                case "*":
+                resNum = parseInt(input_num1.value) * parseInt(input_num2.value);
+                    break;
+                case "/":
+                resNum = parseInt(input_num1.value) / parseInt(input_num2.value);
+                    break;
+                default:
+                    alert('계산할 수 없습니다');
+            }
+
+        
+            input_num1.value = '';
+            input_num2.value = '';
+            res.value = resNum;
+        }
+    </script>
+</body>
+
+</html>

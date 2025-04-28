@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outline, .box {
+            width: 60px;
+            height: 60px;
+        }
+
+        .outline {
+            margin-top: 20px;
+            border: 1px solid blue;
+            z-index: 2;
+            /* 화면에 보여주는 우선 순위(숫자가 높을수록, 위) */
+        }
+
+        .box {
+            background-color: coral;
+            z-index: 1;
+        }
+
+        .tran1 {
+            transform: translateX(50px);
+        }
+        .tran2 {
+            transform: translateX(20px);
+        }
+        .tran3 {
+            transform: translateY(30px);
+        }
+        .tran4 {
+            /* Y축에서 +가 아래로 내려가고 -가 위로 올라감  */
+            transform: translateY(-30px);
+        }
+        .tran5 {
+            /* 대각선으로 이동할 때 */
+            transform: translate(50px, 30px)
+        }
+        .sca1 {
+            /* 1: 100, 0.1: 10% */
+            transform: scaleX(1.2);
+            transform: scaleY(0.5);
+        }
+        .sca2{
+            transform: scale(1.5);
+            /* 수직, 수평 동시 적용*/
+
+            transform: scale(1.5, 0.4);
+            /* 수평: x, 수직: y */
+        }
+        .sca1:hover{
+            transform: scale(1.5);
+        }
+        .rotX {
+            transform: rotate(50deg);
+        }
+
+        .skewX{
+            transform: skewX(50deg);
+
+            /* 
+            x축, y축 같이 넣을 때 
+            transform: skew(50deg, 30deg) ;
+            */
+        }
+        .skewY {
+            transform: skewY(40deg);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="outline">
+        <div class="box tran1 rotX"> </div>
+    </div>
+    <div class="outline">
+        <div class="box tran2"> </div>
+    </div>
+    <hr>
+    <div class="outline">
+        <div class="box tran3 sca1"> </div>
+    </div>
+    <div class="outline">
+        <div class="box tran4 skewX"> </div>
+    </div>
+    <div class="outline">
+        <div class="box tran5 skewY"> </div>
+    </div>
+
+</body>
+
+</html>

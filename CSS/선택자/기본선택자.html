@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>선택자</title>
+    <style>
+        .div_a{
+            width: 100px;
+            height: 100px;
+            border: 1px solid red;
+        }
+
+        /* (html의 태그) 태그 선택자 */
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        div {
+            background-color: darkkhaki;
+        }
+
+        /* 아이디는 #으로 구분 */
+        #inpt1 {
+            color: chocolate;
+        }
+
+        /* 
+        속성 선택자 
+        사용하는 이유: 클래스가 너무 많아져서
+        value에도 사용 가능하긴 한데 값이 변할 가능성이 크니까
+        안변하는 것들을 선택
+        */
+        
+        [type="text"] {
+            padding: 15px;
+            border: 2px solid blue;
+        }
+
+        [name="userId"] {
+            width: 300px;
+        }
+    </style>
+</head>
+<body>
+    <!-- html의 기본 -->
+    <input type="text" id="inpt1" value="2" name="userId"/>
+    <input type="text" id="inpt2" value="2" name="userId"/>
+    
+    <div class="div_a">
+       DIV 1
+    </div>
+     <h1 class="font1"> 제목 </h1>
+     <span class="font1">span 영역</span>
+</body>
+</html>

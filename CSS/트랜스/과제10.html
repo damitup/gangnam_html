@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제 10</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=42dot+Sans:wght@300..800&family=Black+Han+Sans&family=Gasoek+One&family=Gothic+A1&family=Noto+Sans+KR:wght@100..900&family=Special+Gothic+Expanded+One&display=swap"
+        rel="stylesheet">
+
+    <style>
+        body {
+            height: 100vh;
+            background-color: whitesmoke;
+            box-sizing: border-box;
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .out_box {
+
+            display: flex;
+            flex-wrap: wrap;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+
+
+        }
+
+        .in_box {
+            border-radius: 20px;
+            background-color: #fbc4c9;
+            width: 300px;
+            height: 530px;
+
+            overflow: hidden;
+
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        
+        .noto-sans-kr {
+            font-family: "Noto Sans KR", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: weight;
+            font-style: normal;
+        }
+
+        .main_image {
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        .image_1 {
+            width: 100%;
+            height: 100%;
+        }
+
+        
+
+        .in_type {
+            background-color: #FF9A9A;
+            color: white;
+            text-align: center;
+            font-weight: 200;
+            font-size: small;
+            border-radius: 30px;
+
+
+            width: 50px;
+            height: 15px;
+
+            margin-top: 15px;
+            margin-left: 10px;
+            margin-bottom: 5px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .in_title {
+            font-weight: 900;
+            font-size: x-large;
+
+            margin-top: 5px;
+            margin-left: 10px;
+
+        }
+
+        .in_text {
+
+            overflow: scroll;
+
+            height: 120px;
+
+            background-color: #FDFAF6;
+
+            font-weight: 400;
+            font-size: small;
+
+        
+            margin-top: 10px;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+        .under {
+            display: flex;
+            
+            margin-top: 8px;
+            margin-left: 10px;
+
+            justify-content: space-between;
+            margin-right: 120px;
+        }
+        
+    </style>
+</head>
+
+<body>
+    <div class="out_box">
+        <div class="in_box">
+            <div class="main_image">
+                <img src="하치와레.png" onmouseover=" this.src='하치와레2.png'" onmouseout=" this.src='하치와레.png'" alt="하치와레" class="image_1" />
+            </div>
+            <div class="main_text noto-sans-kr">
+                <div class="in_type">
+                    <span class="cat"> 고양이 </span> <br />
+                </div>
+
+                <span class="in_title"> 하치와레 </span> <br />
+                <div class="in_text">
+                    치이카와의 주요 캐릭터 3인방이며 서브 주인공 격 캐릭터다.이름의 유래는 일본에서 턱시도 고양이를 얼굴 무늬가 한자 八모양처럼 생겼다며 八割れ(하치와레)라고 부르는 것에서 따왔다.
+                </div>
+                <div class="under">
+                    <div class="emogi">
+                        <span> 🥧</span>
+                    </div>
+                    <div class="birth">
+                        <span> 2020. 05. 01</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="in_box">
+            <div class="main_image">
+                <img src="치이카와.png" onmouseover=" this.src='치이카와2.png'" onmouseout=" this.src='치이카와.png'" alt="치이카와" class="image_1" />
+            </div>
+            <div class="main_text noto-sans-kr">
+                <div class="in_type">
+                    <span class="cat"> 햄스터 </span> <br />
+                </div>
+
+                <span class="in_title"> 치이카와 </span> <br />
+                <div class="in_text">
+                    치이카와에 등장하는 주요 캐릭터 3인방 중 하나이며 그 중에서도 주인공 격 캐릭터이다. 햄스터 캐릭터로, 처음에는 농담곰 계정에 명확한 배경 설정없이 뭔가 작고 귀여운 녀석이 되고 싶다는 소망을 담은 내용의 낙서로 첫 등장했다.
+                </div>
+                <div class="under">
+                    <div class="emogi">
+                        <span> 🥧</span>
+                    </div>
+                    <div class="birth">
+                        <span> 2017. 05. 01</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="in_box">
+            <div class="main_image">
+                <img src="우사기.png" onmouseover=" this.src='우사기2.png'" onmouseout=" this. src= '우사기.png'" alt="우사기" class="image_1" />
+            </div>
+            <div class="main_text noto-sans-kr">
+                <div class="in_type">
+                    <span class="cat"> 토끼 </span> <br />
+                </div>
+
+                <span class="in_title"> 우사기 </span> <br />
+                <div class="in_text">
+                    치이카와의 주요 캐릭터 3인방 중 하나로 서브 주인공 격 캐릭터다. 노란 토끼 캐릭터로, 치이카와 계정 생성 전 농담곰 단행본 발매 홍보 만화에서부터 꽤 일찍 등장했다.
+                </div>
+                <div class="under">
+                    <div class="emogi">
+                        <span> 🥧</span>
+                    </div>
+                    <div class="birth">
+                        <span> 2020. 05. 01</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </div>
+</body>
+
+</html>

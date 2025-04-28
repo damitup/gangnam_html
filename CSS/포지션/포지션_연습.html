@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gothic+A1&family=Noto+Sans+KR:wght@100..900&display=swap"
+        rel="stylesheet">
+
+    <style>
+        .div_1 {
+            position: relative;
+
+            width: 300px;
+            height: 450px;
+            background-image: url('https://i.pinimg.com/736x/91/48/3f/91483f6bab46c7202f573d8665ac77be.jpg');
+            background-size: contain;
+            background-repeat: no-repeat; 
+        }
+        .in_btn {
+
+            
+            position: absolute;
+            top: 50%;
+            left: 40%;
+            
+
+        }
+        .btn_1 {
+            margin-bottom: 5px;
+        }
+        .gothic-a1-regular {
+            font-family: "Gothic A1", sans-serif;
+            font-optical-sizing: auto;
+            font-weight: 600;
+            font-style: normal;
+        }
+        .let_1 {
+            position: absolute;
+            bottom: 50px;
+            left: 10px;
+            font-size: 30px;
+            color: orange;
+        }
+        .div_2 {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+
+            width: 50px;
+            height: 50px;
+            background-image: url('고양이발바닥.jpg');
+            background-size: contain;
+            background-repeat: no-repeat;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_1">
+        <div class="in_btn">
+            <input type="button" class="btn_1" value="만지기" onclick="touch()"/><br />
+            <input type="button" class="btn_2" value="쓰다듬기" onclick="touch2()" />
+        </div>
+        <div class="let_1 gothic-a1-regular"> 고양이 </div>
+        <div class="div_2"></div>
+    </div>
+    
+    <script>
+        function touch() {
+            alert('만지지 마세요');
+        }
+        function touch2() {
+            alert('쓰다듬지 마세요');
+        }
+    </script>
+</body>
+</html>

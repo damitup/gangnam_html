@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1> 계산기 </h1> <br />
+    <input type="text" id="text_1" />
+    <input type="text" id="text_2" />
+
+    <input type="button" value="전송" onclick="전송()"/> <br />
+
+    <input type="text" id="sum_result" placeholder="결과값 출력"/>
+
+
+    <script>
+        function 전송() {
+            
+            const t1 = document.getElementById('text_1').value;
+            const t2 = document.getElementById('text_2').value;
+
+            // 값이 문자로 넘어와서
+            // const result = t1+t2;
+            // console.log(result);
+
+            const result = Number(t1)+Number(t2);
+            console.log(result);
+            
+            // console.log(Number(t1.value)+Number(t2.value));
+
+            document.getElementById('sum_result').value = result;
+
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> 이미지 </title>
+</head>
+<body>
+    <!-- 이미지를 불러오는 태그 -->
+    <!-- src: 이미지를 불러오는 경로 -->
+    <!-- alt: 이미지를 못 불러올 때, 표현되는 text, 이미지에 대한 설명 -->
+
+    <!-- 상대 경로: 현재 위치 => . 이거부터 시작 (생략가능) -->
+    <img src="./기니피그2.jpg" alt="스케이트보드 타는 기니피그" />
+
+    <!-- 생략 조건: 같은 위치에 존재 했을 떄 -->
+    <img src="기니피그2.jpg" alt="스케이트보드 타는 기니피그2" />
+
+    <!-- 자식 폴더로 이동할 때: [위치]/폴더명 -->
+    <!-- 부모 폴더로 이동할 때: ../ -->
+    <img src="../asset/img/기니피그.jpg" alt="스케이트보드 타는 기니피그3"/>
+
+
+
+
+    <!-- 절대 경로: 최상위는 항상 => / 이거부터 시작 -->
+    <img src="http://127.0.0.1:5500/HTML/%EA%B8%B0%EB%8B%88%ED%94%BC%EA%B7%B82.jpg" alt="스케이트보드 타는 기니피그4"/>
+
+    <img src="https://image.cine21.com/resize/cine21/poster/2007/1002/M0010002_alvin_mein[X280,400].jpg" alt="앨빈과 슈퍼밴드"/>
+</body>
+</html>

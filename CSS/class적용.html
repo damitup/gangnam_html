@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CSS를 CLASS 활용</title>
+
+    <!-- alt + shift + f => 정렬 / CSS 할 때만 사용하시길 다른거랑 섞이면 구림! -->
+    <!-- 2순위, 내부 CSS 적용 범위 -->
+    <style> 
+        /*
+        태그명으로 정의하는 방법
+        같은 태그에는 모두 적용 되므로, 사용할 때 조심할 것 
+        */
+        /* 앞에 *붙인 이유는 전체에 해당한다는 뜻임 */
+        *{
+            padding: 0px;
+            margin: 0px;
+        }
+
+        /* class 이름으로 정의 */
+        .div-a {
+            border: 3px red solid;
+        }
+        .div-b{
+            border: 3px blue solid;
+        }
+        .div-c{
+            border: 3px green solid;
+            padding-left: 30px;
+        }
+        .height-100{
+            height: 100px;
+        }
+        .inner-div {
+            margin-top: 30px;
+
+            width: 40px;
+            height: 40px;
+        }
+    </style>
+</head>
+<body>
+    <!-- 클래스명 중복 가능, 스페이스 필수 -->
+    <div class="div-a height-100"> A영역 </div>
+    <div class="div-b height-100"> B영역 </div>
+    <div class="div-c height-100">
+        <div class="div-a inner-div">
+            내부
+        </div>
+    </div>
+</body>
+</html>

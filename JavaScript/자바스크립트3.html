@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    
+    <!-- input 중요 요소 -->
+    <!-- type: 기능을 구분 -->
+    <!-- value: 값. (사용자가 입력하는 값이 저장되는 공간) -->
+    <!-- 예외) 버튼 계열은 버튼 내부의 text를 사용하는 용도로 쓰임 -->
+    <input type="button" value="클릭" />
+
+    <!-- eventHandler, onClick -->
+    <!-- onClick: event핸들러명 = js함수명 -->
+    <input type="button" value="클릭2" onclick="함수a()" />
+    
+    
+    <script>
+        let 변수a = 'hello world';
+        
+        // 과제 5
+        // 버튼 클릭했을 때, hello world가 consloe창에 나왔음 좋겠다
+        function 함수a(){
+            console.log(변수a);
+        }
+    </script>
+</body>
+</html>

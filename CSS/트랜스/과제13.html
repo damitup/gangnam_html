@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        
+        .main {
+            width: 800px;
+            height: 500px;
+            display: flex;
+            justify-content: center;
+            
+            align-items: center;
+        }
+
+        .target {
+            width: 200px;
+            height: 200px;
+            
+            background-image: url("cry.jpg");
+            background-size: cover;
+        }
+
+        .target.active1 {
+            animation-name: btn_1;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+        }
+
+        .target.active2 {
+            animation-name: btn_2;
+            animation-duration: 5s;
+            
+            animation-iteration-count: 2;
+            animation-direction: alternate;
+        }
+        
+        .target.active3 {
+            animation-name: btn_3;
+            animation-duration: 0.7s;
+            animation-iteration-count: infinite;
+            
+        }
+        .target.active4 {
+            
+            animation-name: btn_4;
+            animation-duration: 3s;
+            animation-iteration-count: 1;
+            animation-direction: alternate;
+        }
+        
+        /* @keyframes [명칭] */
+        @keyframes btn_1 {
+            0% {
+                opacity: 0;
+                transform: translate3d(0, -100%, 0);
+            }
+            100% {
+                opacity: 1;
+                transform: translateZ(0);
+            }
+
+        }
+
+        @keyframes btn_2 {
+            0% {
+                transform: translateX(0px) rotate(0deg);
+            }
+            30% {
+                transform: translateX(300px) rotate(540deg);
+            }
+            50% {
+                transform: translateX(100px) rotate(300deg);
+            }
+            70% {
+                transform: translateX(-300px) rotate(-540deg);
+            }
+            100% {
+                transform: translateX(0px) rotate(0deg);
+            }
+        }
+        @keyframes btn_3 {
+            0% {
+                transform: rotate(0deg);
+            }
+            100% {
+                transform: rotate(360deg);
+            }
+            
+        }
+        @keyframes btn_4 {
+            0% {
+                opacity: 1;
+                transform: translateZ(0);
+            }
+            100% {
+                
+                opacity: 0;
+                transform: translate3d(0, -100%, 0);
+            }
+        }
+        
+    </style>
+</head>
+
+<body>
+    <input type="button" onclick="btn_1()" value="1" />
+    <input type="button" onclick="btn_2()" value="2" />
+    <input type="button" onclick="btn_3()" value="3" />
+    <input type="button" onclick="btn_4()" value="4" />
+
+    <div class="main">
+        <div class="target" id="target"></div>
+    </div>
+
+    <script>
+        function btn_1() {
+            document.getElementById('target').classList.toggle('active1');
+        }
+        function btn_2() {
+            document.getElementById('target').classList.toggle('active2');
+        }
+        function btn_3() {
+            document.getElementById('target').classList.toggle('active3');
+        }
+        function btn_4() {
+            document.getElementById('target').classList.toggle('active4');
+        }
+    </script>
+</body>
+
+</html>

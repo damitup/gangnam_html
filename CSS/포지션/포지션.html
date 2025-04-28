@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div_1 {
+            width: 300px;
+            height: 300px;
+            border: 1px solid magenta;
+        }
+
+        .div_2 {
+
+            position: absolute;
+            bottom: 10px;
+            left: 10px;
+
+            width: 100px;
+            height: 100px;
+            background-color: mediumspringgreen;
+        }
+
+        .div_3 {
+            /* div_2에 있는position: absolute를 컨트롤하고 싶다면
+                부모태그(div_3)에 position: relative; 가 들어가야 함
+
+                부모태그가 없으면 body에도 걸 수 있다.
+            */
+            position: relative;
+            width: 300px;
+            height: 300px;
+            border: 1px solid blue;
+        }
+    </style>
+</head>
+<body>
+    <div class="div_1"> DIV 1 </div>
+    <div class="div_2"> ABS 2</div>
+    <div class="div_3"> DIV 3
+        <div class="div_2"> ABS 4</div>
+    </div>
+</body>
+</html>

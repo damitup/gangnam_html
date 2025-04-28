@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            padding: 0px;
+            margin: 0px;
+            box-sizing: none;
+        }
+        .modal_out {
+
+            display: none;
+
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0,0,0,0.5);
+            position: fixed;
+            top: 0;
+            left: 0;
+
+            /* display: flex; */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal_in {
+            width: 400px;
+            height: 250px;
+
+            background-color: white;
+            border-radius: 20px;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            font-size: 30px;
+            font-weight: bold;
+
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <h1> 모달 창 </h1>
+    <input type="button" value="창 보이기" onclick="show()"/> <br />
+    <img src="기니피그.jpg" alt="스케이드보드 타는 기니피그" width="300" height="300" />
+
+    <!-- 모달창 -->
+    <div class="modal_out" id="target">
+        <div class="modal_in" onclick="down()">
+            HELLO WORLD
+        </div>
+    </div>
+
+    <script>
+
+        function down() {
+            document.getElementById('target').style.display = "none";
+        }
+        function show() {
+            document.getElementById('target').style.display = "flex";
+        }
+    </script>
+</body>
+</html>

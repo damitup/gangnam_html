@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- script 사용 영역 1 (잠시 비워 둠) -->
+    <script>
+
+    </script>
+</head>
+<body>
+    <!-- script 사용 영역 2 -->
+     <script>
+
+        // 변수
+        // var, let, const
+        // java에서 변수 선언 방식
+        // 데이터타입 변수명 = 값;
+
+        // 클래스, 함수
+        // 데이터타입 정수, 논리, 문자 등 상관ㄴ, let으로 통일함
+        // 단, 사용 방법을 통일 시켰다는거지 문자, 숫자, 논리 타입 등이 삭제된 것은 아니다
+
+        let 변수 = 'aa';
+        let 변수2 = 10.0;
+
+        // 데이터타입 구분을 위해 typeof 사용해줌
+        console.log(typeof(변수));
+        console.log(typeof(변수2));
+
+        // 출력
+        // console
+        console.log(변수);  // system.out.print 하고 비슷한 기능
+        console.log(변수2);
+
+        // 조건문
+        // true면 실행
+        // === 같은지 아닌지 비교하기 위해서 (== 2개 써도 되는데 === 이 더 좋음)
+        // 데이터타입까지 동일한지 확인하기 위해서 = 3개를 사용함 
+        if(변수 === 'aa'){
+            console.log('aa가 맞습니다');
+        }
+        
+        // '100'은 문자타입이라 true가 아님
+        // 100은 숫자타입이니까 문장이 나옴
+        if(변수2 === 100 ){
+            console.log('100이 맞습니다');
+        }
+
+        let 변수3 = '300';
+        // 문자로 인식
+        console.log(변수3+500);
+
+        // 숫자로 변환 (정수, 실수 모두)
+        console.log(Number(변수3)+500);
+        console.log(Number(변수)+500);
+        console.log(Number(변수2)+500);
+
+        // 숫자로 변환 (정수)
+        console.log(parseInt(변수3)+500);
+
+        // 실수로 변환
+        console.log(parseFloat(변수3)+500);
+
+        // 문자로 변환, 지정
+        console.log(String(200));
+
+        // 상수 (정의되면 바뀌지 않는 값)
+        // const: 변수 값을 한 번 정하면 변경할 수 없게 만드는 선언 키워드
+        // FIN: 상수 이름, 대문자로 쓰면 "변경되지 않는 값"의 의미를 가짐
+        
+        const FIN = '정의';
+    </script>
+</body>
+</html>
+
+

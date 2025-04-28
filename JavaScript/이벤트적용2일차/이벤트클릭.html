@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .div_a {
+            margin: 10px;
+            width: 100px;
+            height: 100px;
+            background-color: blueviolet;
+            z-index: 2;
+        }
+        /* 식별자(선택자) id */
+        #out {
+            position: fixed;
+            
+            top: 0px;
+            left: 0px;
+
+            width: 100vw;
+            height: 100vh;
+            background-color: rgba(0, 0, 0, 0.6);
+            /* 화면에 나오는 순위? */
+            z-index: 1;
+
+            display: none;
+
+        }
+
+        body {
+            height: 300vh;
+        }
+
+    </style>
+</head>
+<body onload="로드()" onresize="창변경()" onscroll="스크롤()" unload="닫기()">
+    <h1> 클릭 </h1>
+    <!-- 클릭은 마우스 다운과 업이 같이 되는거라 생각하면 됨 -->
+    <!-- 버튼을 누르고 떼기 전에 버튼을 벗어나면 클릭되지 않음 -->
+    <input type="button" onclick="클릭1(5, 'a')" value="클릭"/>
+
+    <!-- 더블 클릭 -->
+    <input type="button" ondblclick="클릭2()" value="더블클릭"/>
+
+    <!-- 마우스를 누르는 순간에 동작 -->
+    <input type="button" onmousedown="클릭3()" value="마우스 다운" />
+
+    <!-- 마우스를 누르고 떼는 순간에 동작 -->
+    <input type="button" onmouseup="클릭4()" value="마우스 업" />
+
+    <div class="div_a" id="div_a" onmouseover="영역1()" onmouseout="영역2()"></div>
+
+    <div id="out"></div>
+
+    <!-- 마우스가 영역 안에서 움직일 때 -->
+    <!-- DB연결해서 사용하지 말 것 -->
+    <!-- <div class="div_a" id="div_a" onmousemove="영역3()"></div> -->
+
+    <h1> 키보드 이벤트 </h1>
+    <!-- 로그인, 회원가입, 유효성 검사, 검색 기능(게시판) -->
+    <!-- 마우스를 사용하지 않아도, 유효성 검사나 혹은 검색이 되는 경우 -->
+    <input type="text" id="tar" onkeydown="키보드1()" placeholder="onkeydown" />
+    <input type="text" id="tar2" onkeyup="키보드2()" placeholder="onkeyup"/>
+    <input type="text" id="tar3" onkeypress="키보드3()" placeholder="onkeypress"/>
+    <input type="text" onkeyup="이벤트1(event)" onkeydown="엔터(event)" placeholder="keyEvent사용" />
+
+
+    <script>
+        // **윈도우 이벤트 핸들러
+        // 바디가 적용 대상임!!
+        // 웹페이지가 이미지, 태그, 스크립트, css 등 로딩(랜더링) 완료될 때 열림
+        // 랜더는 실행될 때 딱 1번이라 이것도 1번만 나옴
+        function 로드() {
+            alert('페이지가 열림');
+        }
+
+        // 해당 영역의 길이 또는 높이의 변동이 감지되었을 때
+        function 창변경() {
+            alert('페이지 크기 변경됨');
+        }
+
+        // 스크롤을 움직일 때
+        function 스크롤() {
+            console.log('스크롤 발생');
+        }
+
+        function 닫기() {
+            alert('닫기');
+        }
+    </script>
+
+    <script>
+        // **키보드 이벤트 핸들러**
+        // 단순하게 어떤 키보드가 눌렸는지만.. 그래서 1개 적게 콘솔에 나옴
+        function 키보드1() {
+            const tar = document.getElementById('tar').value;
+            console.log(tar);
+        }    
+
+        function 키보드2() {
+            const tar = document.getElementById('tar2').value;
+            console.log(tar);
+        }
+
+        function 키보드3() {
+            const tar = document.getElementById('tar3').value;
+            console.log(tar);
+        }
+
+        function 이벤트1(e) {
+            const tar = e.target;
+            console.log(tar.value);
+        }
+
+        function 엔터(e) {
+            console.log(e.keyCode);
+            
+            // enter를 눌렀을 때
+            if(e.keyCode == 13 ) {
+                alert('엔터클릭');
+
+                // 포커스가 3번째 textbox로 넘어감
+                document.getElementById('tar3').focus();
+            }
+        }
+    </script>
+
+    <script>
+        // **마우스 이벤트 핸들러**
+        // 좌 마우스 1번 클릭
+        function 클릭1(num, text) {
+            alert(num);
+            alert(text);
+        }
+
+        function 클릭2() {
+            alert('더블클릭');
+        }
+
+        function 클릭3() {
+            alert('마우스 다운');
+        }
+
+        function 클릭4() {
+            alert('마우스 업');
+        }
+
+        // 마우스 영역 안으로 들어 왔을 때 (onmouseover)
+        function 영역1() {
+            // alert('a');
+
+            // 다시 원래 색상으로 돌아가진 못함 hover는 마우스가 영역을 벗어나면 색이 다시 바뀜
+            document.getElementById('div_a').style.backgroundColor='red';
+
+            // document.getElementById('out').style.display = 'block';
+        }
+
+        // 마우스 영역 밖으로 나갈 때 (onmouseout)
+        function 영역2() {
+            document.getElementById('div_a').style.backgroundColor='blueviolet';
+
+            // document.getElementById('out').style.display = 'none';
+        }
+
+        // 마우스가 움직일 때 (onmouseover)
+        function 영역3() {
+            console.log('3');
+        }
+        
+    </script>
+
+   
+</body>
+</html>

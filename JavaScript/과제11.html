@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .out {
+            font-size: 30px;
+        }
+    </style>
+</head>
+<body>
+    
+    <div>
+        <span>텍스트 입력: </span><br />
+        <input type="text" id="input_text"/>
+        <input type="button" value="글 등록" onclick="inputText()" /><br />
+        <br />
+        <span>텍스트 색상: </span><br/>
+        <input type="radio" name="color" onchange="fn_color('yellow')"/>노랑
+        <input type="radio" name="color" onchange="fn_color('black')" checked="checked"/>검정
+        <input type="radio" name="color" onchange="fn_color('green')"/>초록
+        <input type="radio" name="color" onchange="fn_color('blue')"/>파랑
+        <input type="radio" name="color" onchange="fn_color('red')"/>빨강 <br/>
+        <br />
+        <span>텍스트 스타일: </span><br/>
+        <input type="checkbox" name="tstyle" onclick="bold(event)"/>굵게
+        <input type="checkbox" name="tstyle" onclick="ita(event)"/>기울기<br/>
+        <br />
+        <span>폰트 크기: </span><br/>
+        <div class="text">
+            <input type="button" value="-" onclick="minus()" />
+            <span id="text_size" >30</span>
+            <span>px</span>
+            <input type="button" value="+" onclick="plus()" />
+        </div>
+        <br />
+        
+        <div class="out" id="out_text">텍스트 출력</div>
+
+    </div>
+
+    <script>
+        const inText = document.getElementById('input_text');
+        const outText = document.getElementById('out_text');
+
+        const txSize = document.getElementById('text_size');
+        
+        let fontSize = Number(txSize.textContent);
+        
+
+
+        function inputText() {
+            outText.textContent = inText.value;
+        }
+
+        function fn_color(color) {
+            outText.style.color = color;
+        }
+
+        function bold(e) {
+
+            e.target.checked ? outText.style.fontWeight = 'bold' : outText.style.fontWeight = 'normal';
+            // console.log(e.target.checked);
+
+            // if(e.target.checked) {
+            //     outText.style.fontWeight = 'bold';
+            // }
+            // else {
+            //     outText.style.fontWeight = 'normal';
+            // }
+        }
+        function ita(e) {
+
+            e.target.checked ? outText.style.fontStyle = 'italic' : outText.style.fontStyle = 'normal';
+
+            // if(e.target.checked) {
+            //     outText.style.fontStyle = 'italic';
+            // }
+            // else {
+            //     outText.style.fontStyle = 'normal';
+            // }
+        }
+        function minus() {
+
+            if(fontSize > 1){
+                fontSize --;
+                outText.style.fontSize = fontSize+'px';
+                txSize.textContent = fontSize;
+            }
+        
+        }
+        function plus() {
+            fontSize ++;
+            outText.style.fontSize = fontSize+'px';
+            txSize.textContent = fontSize;
+        }
+
+        
+    </script>
+</body>
+</html>

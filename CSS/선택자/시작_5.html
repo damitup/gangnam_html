@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Modern Card Layout</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background-color: #e9ecef;
+            padding: 20px;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+
+        .container {
+            display: flex;
+            gap: 30px;
+            flex-wrap: wrap;
+            justify-content: center;
+            max-width: 1200px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 15px;
+            width: 350px;
+            overflow: hidden;
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+            position: relative;
+        }
+
+        .card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+
+        .card-image1 {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+        .card-image2 {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+        .card-image3 {
+            position: relative;
+            height: 250px;
+            overflow: hidden;
+        }
+
+        .card-image1 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .card-image2 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+        .card-image3 img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            transition: transform 0.3s ease;
+        }
+
+
+        .card:hover .card-image1 img {
+            transform: scale(1.1);
+            content: url('./frontkitty.jpg');
+           
+        }
+        .card:hover .card-image2 img {
+            transform: scale(1.1);
+            content: url('https://i.pinimg.com/736x/17/09/7d/17097dd5cc400230d3b282488a6c4fda.jpg');
+           
+        }
+        .card:hover .card-image3 img {
+            transform: scale(1.1);
+            content: url('https://i.pinimg.com/736x/fb/58/02/fb58025ace3ddaf68aabb1f1cd920245.jpg');
+           
+        }
+
+        .card-content {
+            padding: 25px;
+            background: white;
+        }
+
+        .card-category {
+            display: inline-block;
+            padding: 5px 15px;
+            background-color: #ff6b6b;
+            color: white;
+            border-radius: 20px;
+            font-size: 0.8em;
+            margin-bottom: 15px;
+        }
+
+        .card-title {
+            font-size: 1.4em;
+            margin-bottom: 15px;
+            color: #2d3436;
+        }
+
+        .card-description {
+            color: #636e72;
+            margin-bottom: 20px;
+            line-height: 1.6;
+        }
+
+        .card-footer {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 15px;
+            border-top: 1px solid #eee;
+        }
+
+        .like-section {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .like-button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1.2em;
+            transition: transform 0.2s ease;
+        }
+
+        .like-button:hover {
+            transform: scale(1.2);
+        }
+
+        .like-count {
+            font-size: 0.9em;
+            color: #ff6b6b;
+            font-weight: bold;
+        }
+
+        .card-date {
+            color: #b2bec3;
+            font-size: 0.9em;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <!-- Card 1 -->
+        <div class="card">
+            <div class="card-image1">
+                <img src="https://i.pinimg.com/736x/87/8b/5e/878b5e68c6c64bf7a8c8e78f2d4c99a4.jpg" alt="자연 풍경">
+            </div>
+            <div class="card-content">
+                <span class="card-category">자연</span>
+                <h3 class="card-title">아름다운 자연의 순간</h3>
+                <p class="card-description">우리의 일상 속에서 발견할 수 있는 자연의 아름다움을 담았습니다. 평화로운 순간을 함께 나눠보세요.</p>
+                <div class="card-footer">
+                    <div class="like-section">
+                        <button class="like-button">❤️</button>
+                        <span class="like-count">1,234</span>
+                    </div>
+                    <span class="card-date">2024.03.21</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 2 -->
+        <div class="card">
+            <div class="card-image2">
+                <img src="https://i.pinimg.com/736x/8f/ca/d8/8fcad85f8ba2445cea9e1eb61693da8b.jpg" alt="도시 풍경">
+            </div>
+            <div class="card-content">
+                <span class="card-category">도시</span>
+                <h3 class="card-title">현대 도시의 야경</h3>
+                <p class="card-description">불이 켜진 도시의 밤 풍경을 담았습니다. 도시의 활기찬 에너지를 느껴보세요.</p>
+                <div class="card-footer">
+                    <div class="like-section">
+                        <button class="like-button">❤️</button>
+                        <span class="like-count">2,567</span>
+                    </div>
+                    <span class="card-date">2024.03.20</span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Card 3 -->
+        <div class="card">
+            <div class="card-image3">
+                <img src="https://i.pinimg.com/736x/7d/05/ab/7d05ab71f7cb7e2e78efc9ae8e09946e.jpg" alt="인물 사진">
+            </div>
+            <div class="card-content">
+                <span class="card-category">인물</span>
+                <h3 class="card-title">일상의 순간들</h3>
+                <p class="card-description">우리의 일상 속에서 포착한 특별한 순간들입니다. 평범한 일상이 특별해지는 순간을 만나보세요.</p>
+                <div class="card-footer">
+                    <div class="like-section">
+                        <button class="like-button">❤️</button>
+                        <span class="like-count">3,890</span>
+                    </div>
+                    <span class="card-date">2024.03.19</span>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+</html> 

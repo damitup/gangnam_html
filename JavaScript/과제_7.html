@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제7</title>
+
+    <link rel="stylesheet" href="과제_7.css" />
+
+</head>
+
+<body>
+    <h1> 설문조사 </h1>
+    <form id="survay">
+        <div class="div_group">
+            <div class="div_title">참여자: </div>
+            <input type="text" id="name" /><br />
+        </div>
+
+        <div class="div_city">
+            <span>좋아하는 도시: </span>
+            <input type="radio" name="city" value="서울" />서울
+            <input type="radio" name="city" value="인천" />인천
+            <input type="radio" name="city" value="대전" />대전
+            <input type="radio" name="city" value="부산" />부산
+            <input type="radio" name="city" value="광주" />광주
+            <input type="radio" name="city" value="그 외" />그 외 <input type="text" id="etc" /> <br />
+
+        </div>
+        <div class="div_reason">
+            <span>좋아하는 이유: </span>
+            <input type="checkbox" name="reason" value="먹거리" />먹거리
+            <input type="checkbox" name="reason" value="레저" />레저
+            <input type="checkbox" name="reason" value="힐링" />힐링
+            <input type="checkbox" name="reason" value="교통" />교통
+            <input type="checkbox" name="reason" value="쇼핑" />쇼핑
+            <input type="checkbox" name="reason" value="관광" />관광 <br />
+        </div>
+    </form>
+
+    <div class="div_button">
+        <input type="button" value="제출" onclick="submit()" />
+        <input type="button" value="초기화" onclick="retry()" />
+    </div>
+
+    <script>
+        function submit() {
+
+            const input_name = document.getElementById('name');
+            const input_etc = document.getElementById('etc');
+
+            const input_city = document.getElementsByName('city');
+            const input_reason = document.getElementsByName('reason');
+
+            let result = '';
+
+            console.log('참여자 이름: ', input_name.value);
+
+            for (let i = 0; i < input_city.length; i++) {
+                if (input_city[i].checked) {
+                    switch (input_city[i].value) {
+                        case '서울':
+                            console.log('좋아하는 도시: ', input_city[i].value);
+                            break;
+                        case '인천':
+                            console.log('좋아하는 도시: ', input_city[i].value);
+                            break;
+                        case '대전':
+                            console.log('좋아하는 도시: ', input_city[i].value);
+                            break;
+                        case '부산':
+                            console.log('좋아하는 도시: ', input_city[i].value);
+                            break;
+                        case '광주':
+                            console.log('좋아하는 도시: ', input_city[i].value);
+                            break;
+                        case '그 외':
+                            console.log('좋아하는 도시: ', input_etc.value);
+                            break;
+                    }
+                }
+            }
+
+            result = '';
+            for (let j = 0; j < input_reason.length; j++) {
+                if (input_reason[j].checked) {
+                    result = result + input_reason[j].value + ' ';
+                    // switch (input_reason[j].value) {
+                    //     case '먹거리':
+                    //         result = '먹거리';
+                    //         console.log('좋아하는 이유: ', input_reason[j].value);
+                    //         break;
+                    //     case '레저':
+                    //         result = '레저';
+                    //         console.log('좋아하는 이유: ', input_reason[j].value);
+                    //         break;
+                    //     case '힐링':
+                    //         console.log('좋아하는 이유: ', input_reason[j].value);
+                    //         break;
+                    //     case '교통':
+                    //         console.log('좋아하는 이유: ', input_reason[j].value);
+                    //         break;
+                    //     case '쇼핑':
+                    //         console.log('좋아하는 이유: ', input_reason[j].value);
+                    //         break;
+                    //     case '관광':
+                    //         console.log('좋아하는 이유: ', input_reason[j].value);
+                    //         break;
+
+                    // }
+
+
+
+                }
+            }
+            console.log('좋아하는 이유: ', result);
+        }
+
+        function retry() {
+
+            document.getElementById("survay").reset();
+        }    
+    </script>
+</body>
+
+</html>

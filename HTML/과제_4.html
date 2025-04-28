@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>과제4_자기소개폼</title>
+</head>
+<body>
+    <!-- form에 input을 넣어준다고 생각하면 됨 -->
+    <form>
+    <h1>자기소개 폼</h1>
+    <span> 이름: </span><input type="text"/><br />
+    <span> 나이: </span><input type="text"/><br />
+    <br />
+
+    <span>성별: </span><br />
+    <input type="radio" name="gender"> 남
+    <input type="radio" name="gender"> 여
+    <br />
+    <br />
+
+    <span>취미: </span><br />
+    <input type="checkbox" name="hobby"> 독서
+    <input type="checkbox" name="hobby"> 운동
+    <input type="checkbox" name="gender"> 영화
+    <br />
+    <br />
+
+    <span>생년월일: </span>
+    <input type="date"/>
+    <br />
+    <br />
+
+    <span>좋아하는 색상: </span><input type="color"/>
+    <br />
+    <br />
+
+    <!-- 이메일 형식에 @를 안넣고 버튼을 누르면 형식이 틀렸다고 나옴 -->
+    <span>이메일: </span><input type="email"/>
+    <br />
+    <br />
+
+    <span>자기소개: </span><br />
+    <textarea></textarea>
+    <br />
+    <br />
+
+    
+    <input type="submit" value="제출하기" />
+    </form>
+</body>
+</html>

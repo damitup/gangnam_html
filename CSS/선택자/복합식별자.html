@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>복합 식별자</title>
+    <style>
+        div {
+            width: 50px;
+            height: 50px;
+        }
+
+        /* [태그][식별자] 둘이 같은 위치에 있어서 띄어쓰기 없어도 됨 */
+        div.div_a {
+            border: 1px solid red;
+        }
+
+        div.div_b {
+            border: 1px solid blue;
+        }
+
+        input[name="hobby"] {
+            margin: 15px;
+        }
+
+        /* 여기서는 [상위태그] [하위태그] 중간에 띄어쓰기 넣어줘야 됨 
+           플랙스에서 주로 사용함
+        */
+        /* 바로 아래 있는 div에만 하겠다는 건가? > */
+        .out_a > div {
+            width: 100px;
+            height: 100px;
+            /* background-color: aqua; */
+            border: 1px solid red;
+        }
+        .out_a div {
+            font-size: 30px;
+            color: magenta;
+        }
+    </style>
+</head>
+
+<body>
+    <h4> 태그 + 식별자 </h4>
+    <div class="div_a">1</div>
+    <div class="div_a">2</div>
+    <input type="radio" class="div_b" name="hobby" />서울
+    <input type="radio" class="div_b" name="hobby" />경기
+    <div class="div_b">3</div>
+
+    <!-- 다른 페이지하고 css 명칭 중복을 위해서 -->
+    <!-- 중복을 억제하기 위해서 사용 다른 html에 영향을 미치지 않기 위해서 -->
+    <!-- 클래스 명칭이 중복될 때 다른 클래스에 영향을 끼치지 않으려고 -->
+    <h4> 하위 식별자 </h4>
+    <div class="out_a">A
+        <div class="div_c">C
+            <div class="div_d">D</div>
+            <div class="div_e">E</div>
+            <input type="text" />
+        </div>
+        <div class="div_d"></div>
+    </div>
+
+    <!-- 형제식별자 style -->
+    <style>
+        .div_f {
+            width: 100vw;
+            height: 300px;
+            border: 1px solid red;
+
+            /* 
+            사이즈 넘어가는 걸 막는
+            overflow: hidden; */
+        }
+        h1 + input[type="text"] {
+            border: 2px solid yellowgreen;
+        }
+        h1 ~ input[type="text"] {
+            padding: 20px;
+            font-size: 20px;
+            font-weight: 20px;
+        }
+    </style>
+    <!-- 근접된 태그에 적용 -->
+    <h4> 형제 식별자 </h4>
+    <div class="div_f">
+        <input type="text"/>
+        <h1>HELLO WORLD</h1>
+        <input type="text"/>
+        <input type="text"/>
+        <h6> 구분선 </h6>
+        <input type="text"/>
+    </div>
+</body>
+
+</html>
