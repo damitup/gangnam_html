@@ -45,6 +45,22 @@
             alert('라디오를 선택해주세요');
             return false;
         }
+
+        function joinAction() {
+            // 아이디 유효성 검사
+            if(!inp_id) {
+                return false;
+            }
+            // 비밀번호 유효성 검사
+            if(!inp_pw) {
+                return false;
+            }
+            // 라디오 유효성 검사
+            if(!fn_nat()) {
+                return false;
+            }
+            // 아이디 회원가입을 위한 로직
+        }
     </script>
 </body>
 </html>
