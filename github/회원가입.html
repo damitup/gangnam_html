@@ -9,12 +9,12 @@
     <label>ID</label><input type="text" onchange="inp_id()" id="inp"/><br/>
     <label>PW</label><input type="password" onchange="inp_pw()" id="inp2"/><br/>
     <label>선택</label>
-    <input type="radio" name="nat"/>내국인
-    <input type="radio" name="nat"/>외국인<br/>
+    <input type="radio" name="nat" onchange="fn_nat()"/>내국인
+    <input type="radio" name="nat" onchange="fn_nat()"/>외국인<br/>
 
     <script>
         // 유효성 검사
-
+        // 아이디
         function inp_id() {
             const target = document.getElementById('inp').value;
             if(target.trim().length == 0) {
@@ -23,7 +23,7 @@
             }    
             return true;
         }
-
+        // 비밀번호
         function inp_pw() {
             const target = document.getElementById('inp2').value;
             if(target.trim().length == 0) {
@@ -31,6 +31,17 @@
                 return false;
             }    
             return true;
+        }
+        // 라디오 선택 유효성 검사
+        function fn_nat() {
+            const tar = document.getElementsByName('nat');
+            for (let i=0; i < tar.length; i++) {
+                if(tar[i].checked) {
+                    return true;
+                }
+            }
+            alert('라디오를 선택해주세요')
+            return false;
         }
     </script>
 </body>
