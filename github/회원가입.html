@@ -7,7 +7,7 @@
 </head>
 <body>
     <label>ID</label><input type="text" onchange="inp_id()" id="inp"/><br/>
-    <label>PW</label><input type="password"/><br/>
+    <label>PW</label><input type="password" onchange="inp_pw()" id="inp2"/><br/>
     <label>선택</label>
     <input type="radio" name="nat"/>내국인
     <input type="radio" name="nat"/>외국인<br/>
@@ -19,6 +19,15 @@
             const target = document.getElementById('inp').value;
             if(target.trim().length == 0) {
                 alert('아이디를 입력해주세요');
+                return false;
+            }    
+            return true;
+        }
+
+        function inp_pw() {
+            const target = document.getElementById('inp2').value;
+            if(target.trim().length == 0) {
+                alert('비밀번호를 입력해주세요');
                 return false;
             }    
             return true;
